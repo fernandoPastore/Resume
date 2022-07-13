@@ -1,0 +1,138 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #F0F0F0;
+    height: 100vh;
+}
+
+h1, h2{
+    font-family: 'Lora', serif;
+}
+
+main {
+    background-color: white;
+    width: 960px;
+    margin: 50px auto;
+    display: grid;
+    grid-template-areas: "contact experiences"
+                         "skills  experiences";
+    grid-template-columns: 425px 1fr;
+    grid-template-rows: 340px 1fr;
+    box-shadow: 0 0 10px  rgb(110, 110, 110);
+}
+
+main  section {
+    padding: 32px;
+}
+
+#contact {
+    grid-area: contact;
+    background-color: #333;
+    color: white;
+}
+
+#contact h1, #contact h2{
+    margin: 0;
+}
+
+#contact h2 {
+    font-style: italic;
+    font-weight: normal;
+    font-size: 1rem;
+}
+
+
+#contact > ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: .9rem;
+}
+
+#contact > ul li {
+    margin-top: 8px;
+}
+
+#contact > ul i{
+    position: relative;
+    top: 8px;
+    margin-right: 8px
+}
+
+#contact > ul a {
+    color: white;
+}
+
+#skills {
+    grid-area: skills;
+    background-color: #F0F0F0;
+}
+#skills > h2 {
+    font-size: 1.5rem;
+}
+
+#experiences {
+    grid-area: experiences;
+    color: #333
+}
+
+#experiences h2{
+    margin-top: 50px;
+}
+
+#experiences i {
+    position: relative;
+    top: 0.4rem;
+}
+
+#experiences h3{
+    margin-bottom: 0;
+}
+
+#experiences h4 {
+    margin: 0 0 10px 0;
+    font-size: .8rem;
+}
+
+#experiences article div {
+    display: flex;
+    justify-content: space-between;
+    font-size: .8rem;
+}
+
+#experiences article ul {
+    margin-top: 30px;
+}
+
+#experiences article p { 
+    margin-left:1.8rem;
+}
+
+
+@media (max-width: 960px) {
+    main {
+        margin: 0;
+        width: 100%;
+        box-shadow: none;
+    }
+}
+
+@media (max-width: 720px) {
+    main {
+        grid-template-areas: "contact"
+                             "skills "
+                             "experiences";
+        grid-template-columns: 1fr;
+        min-width: 360px;
+    }
+}
+
